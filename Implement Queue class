@@ -1,0 +1,71 @@
+Implement the Queue class in your favorite programming language (should have two separate implementations):
+
+Array implementation
+Linked list implementation
+[execution time limit] 4 seconds (py3)
+######################################################
+
+# import requests
+# import mysql.connector
+# import pandas as pd
+
+class queue_arr:
+    
+    def __init__(self):
+        self.arr= []
+        self.head = 0
+        
+    def push(self, value):
+        self.arr.append(value)
+    
+    def pop(self):
+        if(self.index - len(self.arr) == 0):
+            return None
+        self.index -=1
+        
+        return  self.arr[ self.index+1]
+        
+    def size(self):
+        return self.index - len( self.arr)
+
+
+class Node:
+      
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+        
+        
+class queue_node:
+    
+    def __init__(self):
+        self.front = self.last = None
+        self.size = 0
+        
+    def push(self, value):
+        temp = Node(value)
+        if (self.front == None):
+            self.front = self.last =temp
+            
+        self.last.next = temp
+        self.last = temp
+        self.size += 1 
+    
+    def pop(self):
+        if(self.front == None):
+            
+            return None 
+        temp = self.front
+        self.front = self.front.next
+        
+        if self.front == None:
+            self.last = None
+        elf.size -= 1 
+        
+        return  temp.value
+        
+    def size(self):
+        
+        return self.size
+        
+        
