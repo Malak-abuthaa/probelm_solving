@@ -34,5 +34,16 @@ def solution(a):
             return a[i]
 
 
+        
+        """
+        better solution is to use window of threee 
+
+                for(int i = 1; i < N-1; i++){
+                if(A[i-1] == A[i] || A[i] == A[i+1])
+                return A[i];
+                else if(A[i-1] == A[i+1])
+                return A[i-1]
+                }
+        ""
 
 
