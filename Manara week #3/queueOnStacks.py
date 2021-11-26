@@ -57,3 +57,13 @@ def queueOnStacks(requests):
             ans.append(remove())
     return ans
 
+
+
+"""
+Time complxity = 
+
+O(N*(R+L))
+N for request 
+R for removing from right stack 
+L for removing from left stack 
+"""
