@@ -62,7 +62,7 @@ def solution(k, a):
 
 
     # return count
-    
+    #smaha Solution in Java
     
     int solution(int k, int[] a) {
    HashMap<Integer,Integer> map  = new HashMap<Integer,Integer>(); 
