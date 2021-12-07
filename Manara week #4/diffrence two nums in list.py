@@ -62,3 +62,31 @@ def solution(k, a):
 
 
     # return count
+    #smaha Solution in Java
+    
+    int solution(int k, int[] a) {
+   HashMap<Integer,Integer> map  = new HashMap<Integer,Integer>(); 
+   int counter = 0; 
+   int mod = 1000000007; 
+   for(int num : a){
+       if(map.containsKey(num)){
+           map.put(num, map.get(num)+1);
+       }
+       else{
+           map.put(num,1);
+       }
+   }
+   for(int num : a){
+       int diff = num-k; 
+       if(map.containsKey(diff)){
+           if(diff == num){
+             counter= (counter+map.get(diff)-1)%mod;  
+           }
+           else{
+             counter= (counter+map.get(diff))%mod;  
+           }
+       }
+   }
+   
+   return counter%mod; 
+}
